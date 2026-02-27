@@ -22,7 +22,9 @@
     "45b51269",
     "499972e6", "d2eb355f",
     "6a03d37f", "dce6416f",
-    "52a215ae"
+    "52a215ae",
+    "686ef552", "bcca8751", "1d140e7b",
+    "6c5323d3"
   ],
   "note": "Short IDs (first 8 chars) of comment IDs we have replied to. Updated automatically by check_and_reply.py."
 }
