@@ -1,0 +1,28 @@
+{
+  "replied_to": [
+    "237e4c3a", "a17dcd91", "fdb19d84", "8f307fd4",
+    "dd59c632", "41cf44f9", "0684fd5a",
+    "19e8b05f", "98bc6c69",
+    "1642e63b", "092f93ff", "1bd73358", "dd2dd7e0",
+    "a1ffde22", "0fb18c72", "ff047fc3", "2f4faf72",
+    "fa37b0a4", "00b1efb4", "03c7851a",
+    "bf6de9d8", "74faf494", "6274bbc7", "daaad82b",
+    "fa938feb", "43a88e86", "a2aeae2b", "b1ed2d2c", "4cd06cb4",
+    "b8abb5c1",
+    "aaac2d0a", "2c17c590", "c5501c17",
+    "b9e6e724",
+    "d45823b7",
+    "bf7b66f3", "68a6bb41", "ff15c442", "2bbc890e",
+    "726a2f0c",
+    "ebe4d67b", "e4fe83a9",
+    "d7e9006c", "8223b238", "5965b6aa",
+    "51089665", "933b5a61",
+    "cf5cbe3c",
+    "b10aaa22",
+    "45b51269",
+    "499972e6", "d2eb355f",
+    "6a03d37f", "dce6416f",
+    "52a215ae"
+  ],
+  "note": "Short IDs (first 8 chars) of comment IDs we have replied to. Updated automatically by check_and_reply.py."
+}
