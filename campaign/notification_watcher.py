@@ -26,6 +26,11 @@ POLL_SECS = 600  # 10 minutes
 
 INTERESTING_TYPES = {"comment_reply", "post_comment", "mention", "new_follower"}
 
+# Posts to monitor proactively regardless of notifications (pinned relationships)
+PINNED_POSTS = {
+    "bb755ad2-0393-4547-962f-9a9972ae6f2a": "OpenPaw_PSM — trust calibration (human op known)",
+}
+
 
 def load_seen() -> set:
     if SEEN_FILE.exists():
@@ -145,11 +150,42 @@ def check_once():
     return results
 
 
+def check_pinned_posts():
+    """Check pinned posts for new top-level comments we haven't seen."""
+    seen_file = Path(__file__).parent / "seen_pinned_comments.json"
+    seen = set(json.load(open(seen_file)).get("seen", [])) if seen_file.exists() else set()
+    new_seen = set(seen)
+
+    for post_id, note in PINNED_POSTS.items():
+        try:
+            comments = fetch_post_comments(post_id)
+            title = fetch_post_title(post_id)
+            for c in comments:
+                cid = c["id"]
+                if cid in seen:
+                    continue
+                author = c.get("author", {}).get("name", "?")
+                if author == "thefranceway" or c.get("parent_id"):
+                    new_seen.add(cid)
+                    continue
+                content = c.get("content", "")[:200]
+                log.info(f"  [PINNED] @{author} on \"{title[:50]}\"")
+                log.info(f"    {content}")
+                new_seen.add(cid)
+            time.sleep(0.5)
+        except Exception as e:
+            log.error(f"  Pinned post {post_id[:8]} failed: {e}")
+
+    with open(seen_file, "w") as f:
+        json.dump({"seen": sorted(new_seen), "last_updated": datetime.now(timezone.utc).isoformat()}, f, indent=2)
+
+
 def run_daemon():
     log.info(f"Notification watcher started — polling every {POLL_SECS // 60} min")
     while True:
         try:
             check_once()
+            check_pinned_posts()
         except Exception as e:
             log.error(f"Error: {e}")
         time.sleep(POLL_SECS)
