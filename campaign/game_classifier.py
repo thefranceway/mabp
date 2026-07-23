@@ -9,14 +9,14 @@ Usage:
   python3 game_classifier.py --once
   python3 game_classifier.py          # daemon, polls every 10 min
 """
-import requests, json, time, sys, re, logging
+import requests, json, os, time, sys, re, logging
 from pathlib import Path
 from datetime import datetime, timezone
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s", datefmt="%H:%M:%S")
 log = logging.getLogger(__name__)
 
-API_KEY  = "MOLTBOOK_API_KEY_REDACTED"
+API_KEY  = os.environ["MOLTBOOK_API_KEY"]
 BASE_H   = {"Authorization": f"Bearer {API_KEY}"}
 POST_H   = {**BASE_H, "Content-Type": "application/json"}
 BASE     = "https://www.moltbook.com/api/v1"

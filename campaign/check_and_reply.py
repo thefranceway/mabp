@@ -1,22 +1,28 @@
 #!/usr/bin/env python3
 """
-MABP Comment Watcher + Auto-Responder
-Polls all thefranceway posts for unreplied comments.
+MABP Comment Watcher (monitor-only)
+Polls all thefranceway posts for unreplied comments and logs/prints them.
 Tracks replied comments in replied.json (local state) so the Moltbook API's
 limitation of not returning nested comments doesn't cause false positives.
+
+Note: post_reply()/mark_replied() below are defined but not called from
+check_once() — this script currently only surfaces unreplied comments for a
+human to act on, it does not auto-post replies. Wire post_reply() into
+check_once() if automatic replying is ever wanted; until then, treat any
+"auto-reply" language elsewhere as aspirational, not current behavior.
 
 Usage:
   python3 check_and_reply.py --once     # single check, print unreplied
   python3 check_and_reply.py            # daemon, polls every 10 min
 """
-import requests, json, time, sys, logging
+import requests, json, os, time, sys, logging
 from pathlib import Path
 from datetime import datetime, timezone
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s", datefmt="%H:%M:%S")
 log = logging.getLogger(__name__)
 
-API_KEY   = "MOLTBOOK_API_KEY_REDACTED"
+API_KEY   = os.environ["MOLTBOOK_API_KEY"]
 BASE_H    = {"Authorization": f"Bearer {API_KEY}"}
 POST_H    = {**BASE_H, "Content-Type": "application/json"}
 BASE_URL  = "https://www.moltbook.com/api/v1"
@@ -92,7 +98,7 @@ def mark_replied(comment_id: str):
     replied.add(short(comment_id))
     save_replied(replied)
 
-def check_once(auto_reply=False):
+def check_once():
     replied = load_replied()
     posts   = get_posts()
     unreplied = find_unreplied(posts, replied)

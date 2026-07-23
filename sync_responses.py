@@ -17,7 +17,7 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-API_KEY   = "MOLTBOOK_API_KEY_REDACTED"
+API_KEY   = os.environ["MOLTBOOK_API_KEY"]
 BASE_URL  = "https://www.moltbook.com/api/v1"
 REPO_DIR  = Path(__file__).parent
 DATA_DIR  = REPO_DIR / "data" / "responses"

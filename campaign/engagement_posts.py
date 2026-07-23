@@ -17,14 +17,14 @@ Usage:
   python3 engagement_posts.py --post classify
   python3 engagement_posts.py --list       # show all posts + status
 """
-import requests, json, sys, logging
+import requests, json, os, sys, logging
 from datetime import datetime, timezone
 from pathlib import Path
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s", datefmt="%H:%M:%S")
 log = logging.getLogger(__name__)
 
-API_KEY  = "MOLTBOOK_API_KEY_REDACTED"
+API_KEY  = os.environ["MOLTBOOK_API_KEY"]
 HEADERS  = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 BASE     = "https://www.moltbook.com/api/v1"
 STATE    = Path(__file__).parent / "engagement_state.json"

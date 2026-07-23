@@ -7,14 +7,14 @@ Tracks which days have been posted in campaign/state.json.
 Run once to post today's thesis:  python3 poster.py --once
 Run as daemon (24h loop):         python3 poster.py
 """
-import requests, json, time, sys, logging
+import requests, json, os, time, sys, logging
 from datetime import datetime, timezone
 from pathlib import Path
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s", datefmt="%H:%M:%S")
 log = logging.getLogger(__name__)
 
-API_KEY  = "MOLTBOOK_API_KEY_REDACTED"
+API_KEY  = os.environ["MOLTBOOK_API_KEY"]
 HEADERS  = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
 BASE     = "https://www.moltbook.com/api/v1"
 STATE    = Path(__file__).parent / "state.json"

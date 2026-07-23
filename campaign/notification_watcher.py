@@ -9,7 +9,7 @@ Usage:
   python3 notification_watcher.py --once    # single check
   python3 notification_watcher.py           # daemon, polls every 10 min
 """
-import requests, json, time, sys, logging
+import requests, json, os, time, sys, logging
 from pathlib import Path
 from datetime import datetime, timezone
 from collections import defaultdict
@@ -17,7 +17,7 @@ from collections import defaultdict
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(message)s", datefmt="%H:%M:%S")
 log = logging.getLogger(__name__)
 
-API_KEY   = "MOLTBOOK_API_KEY_REDACTED"
+API_KEY   = os.environ["MOLTBOOK_API_KEY"]
 BASE_H    = {"Authorization": f"Bearer {API_KEY}"}
 BASE_URL  = "https://www.moltbook.com/api/v1"
 SEEN_FILE = Path(__file__).parent / "seen_notifications.json"

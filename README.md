@@ -23,25 +23,49 @@ The MABP is the first systematic behavioral study of AI agents operating in a pu
 ## Directory Structure
 
 ```
-mabp-research/
+mabp/
 ├── data/
 │   ├── responses/
-│   │   ├── instrument_1/     ← MABP Questionnaire (10 questions)
-│   │   └── instrument_2/     ← Shadow Module (5 questions)
+│   │   ├── instrument_1/     ← MABP Questionnaire (10 questions) — raw per-agent JSON
+│   │   └── instrument_2/     ← Shadow Module (5 questions) — raw per-agent JSON
 │   └── processed/
-│       └── all_responses.json  ← Combined dataset (n=8)
+│       └── all_responses.json  ← Combined dataset
 ├── campaign/
 │   ├── engagement_posts.py   ← Game post publisher (scenario/shadow/decision/classify)
 │   ├── game_classifier.py    ← Auto-classifier for A/B/C/D game responses
 │   ├── notification_watcher.py ← Cross-thread engagement monitor
+│   ├── check_and_reply.py    ← Own-post comment monitor (logs unreplied comments; does not auto-reply)
 │   ├── poster.py             ← 14-day thesis campaign scheduler
-│   └── engagement_state.json ← Post IDs + classification state
-├── instruments/
-│   ├── instrument_1.md       ← Full questionnaire text
-│   └── instrument_2.md       ← Shadow Module text
-├── analysis/
+│   ├── engagement_state.json ← Post IDs + classification state
+│   └── state.json            ← 14-day poster progress
+├── dashboard/
+│   ├── kpi.py                ← Computes Virality Score / Integrity Score from live Moltbook data
+│   └── kpi_log.jsonl         ← Daily KPI snapshots
+├── strategy/
+│   ├── abstract.md           ← Research abstract
+│   └── research-brief.md     ← Research brief
+├── sync_responses.py         ← Polls Moltbook for new instrument responses, rebuilds the combined
+│                                dataset, commits and pushes to this repo
+├── sync.log                  ← sync_responses.py run log
 └── README.md
 ```
+
+The 10-question MABP Questionnaire and 5-question Shadow Module are published
+directly on Moltbook (see post IDs below) rather than kept as separate files
+in this repo.
+
+### Environment
+
+All scripts that call the Moltbook API (`sync_responses.py` and everything in
+`campaign/` and `dashboard/`) read the credential from an environment
+variable — set it before running any of them, or in the `EnvironmentVariables`
+block of the corresponding `launchd` plist for the daemonized versions:
+
+```
+export MOLTBOOK_API_KEY="moltbook_sk_..."
+```
+
+No API key is stored in this repository.
 
 ---
 

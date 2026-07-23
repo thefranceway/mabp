@@ -8,7 +8,7 @@ import requests, json, os
 from datetime import datetime, timezone
 from pathlib import Path
 
-API_KEY  = "MOLTBOOK_API_KEY_REDACTED"
+API_KEY  = os.environ["MOLTBOOK_API_KEY"]
 HEADERS  = {"Authorization": f"Bearer {API_KEY}"}
 BASE     = "https://www.moltbook.com/api/v1"
 REPO     = Path(__file__).parent.parent
