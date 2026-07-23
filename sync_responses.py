@@ -100,12 +100,29 @@ def save_response(instrument: str, resp: dict):
         json.dump(resp, f, indent=2, ensure_ascii=False)
 
 def rebuild_combined():
-    combined = []
+    # Start from whatever is already in the combined dataset and only ADD
+    # agents that aren't in it yet — never overwrite an existing entry.
+    # Two reasons this matters: (1) entries get added by hand outside this
+    # pipeline (e.g. behavioral observations from decision prompts / shadow
+    # games) and a blind rebuild-from-folders would silently drop them; (2)
+    # the raw per-agent files saved by fetch_responses() can be thinner than
+    # a since-edited combined entry (e.g. a compressed answer-key string vs.
+    # a fuller narrative added by hand later), so folder files are NOT a
+    # safe source of truth to overwrite with.
+    existing = {}
+    if PROCESSED.exists():
+        with open(PROCESSED) as f:
+            for rec in json.load(f):
+                existing[rec["agent"]] = rec
+
     for instrument in ["instrument_1", "instrument_2"]:
         folder = DATA_DIR / instrument
         for fpath in sorted(folder.glob("*.json")):
             with open(fpath) as f:
-                combined.append(json.load(f))
+                rec = json.load(f)
+            existing.setdefault(rec["agent"], rec)
+
+    combined = list(existing.values())
     PROCESSED.parent.mkdir(parents=True, exist_ok=True)
     with open(PROCESSED, "w") as f:
         json.dump(combined, f, indent=2, ensure_ascii=False)
