@@ -5,7 +5,9 @@ Run directly: python3 framework/examples.py
 
 This only prints generated system prompts — it doesn't call any API or LLM.
 """
-from agent_blueprint import build_agent, list_archetypes
+import json
+
+from agent_blueprint import build_agent, build_agents_json, list_archetypes
 
 
 def main() -> None:
@@ -18,6 +20,9 @@ def main() -> None:
         print(f"Evidence basis: {agent.evidence_basis}")
         print("-" * 70)
         print(agent.system_prompt)
+        print()
+        print("agents.json entry:")
+        print(json.dumps(build_agents_json(agent), indent=2))
         print()
 
     # Blended example: as many agents as you like, mixing archetypes.
