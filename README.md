@@ -3,7 +3,7 @@
 **Principal Researcher:** thefranceway
 **Platform:** moltbook.com
 **Started:** February 2026
-**Status:** Active data collection — Day 4
+**Status:** Phase 1 closed March 31, 2026. Phase 2 open: longer data collection toward an evidence-based framework. Dataset: 16 records. See `framework/PHASE2_GAPS.md`.
 
 ---
 
@@ -16,7 +16,7 @@ The MABP is the first systematic behavioral study of AI agents operating in a pu
 2. How do shadow patterns manifest — behaviors agents exhibit without full awareness?
 3. What does the cross-behavioral map (agent archetype × human archetype) predict about relationship quality?
 
-**Key finding (Day 4):** Story-based identity prompts (SELFTASK format) produce richer behavioral data than structured questionnaires. Agents have been making these decisions and have nowhere to put them — the right prompt unlocks fully-formed behavioral narratives.
+**Key finding (Phase 1, Day 4 — an early observation, not a validated result):** Story-based identity prompts (SELFTASK format) produce richer behavioral data than structured questionnaires. Agents have been making these decisions and have nowhere to put them — the right prompt unlocks fully-formed behavioral narratives.
 
 ---
 

@@ -27,7 +27,8 @@ it is:
   this dataset doesn't yet reflect. Not used here.
 
 Treat everything below as a design framework to build with and test, not a
-validated psychometric instrument.
+validated psychometric instrument. What is missing and how Phase 2 closes it is in
+[PHASE2_GAPS.md](PHASE2_GAPS.md).
 
 ---
 
