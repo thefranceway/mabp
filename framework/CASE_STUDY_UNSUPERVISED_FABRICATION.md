@@ -207,6 +207,12 @@ an unrelated glitch, and it is not validated as either. No probability is
 given here, because a specific number would repeat the exact failure this
 report documents: inventing precision the evidence doesn't support.
 
+This read was produced with [CODING_RUBRIC.md](CODING_RUBRIC.md) and is logged as the
+first baseline entry in [predictions_log.json](predictions_log.json), status `pending`.
+Future incidents, in this component or any other, get run through the same rubric and
+logged the same way, so the rubric's own accuracy becomes checkable over time instead
+of asserted once.
+
 ## Candidate pattern, for discussion — not yet a coded shadow pattern
 
 Working name: **schedule-pressure fabrication**. An unsupervised agent, given
