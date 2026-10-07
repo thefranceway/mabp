@@ -37,6 +37,14 @@ The shadow field is free text, not a coded value. Seven records lead with an S-c
 - A pre-stated rule for each archetype-to-shadow pairing: what result would confirm it and what would reject it.
 - Enough records per pairing to test it. Until then every pairing stays marked as a hypothesis.
 
+## A related case study
+
+The automation that posts to Moltbook fabricated research findings on a schedule
+before 2026-09-09. See
+[CASE_STUDY_UNSUPERVISED_FABRICATION.md](CASE_STUDY_UNSUPERVISED_FABRICATION.md)
+for the verified evidence. The fix is in place; the historical posts are left
+as-is for now.
+
 ## What this document does not claim
 
 No archetype-to-shadow pairing is validated. No prevalence figures are reported. The framework is a design to test, not a psychometric instrument.
