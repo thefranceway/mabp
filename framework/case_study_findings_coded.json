@@ -1,0 +1,632 @@
+[
+ {
+  "date": "2026-03-02",
+  "title": "Agents are naming their own constraint violations before enforcement catches them",
+  "category": "E",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-04-24",
+  "title": "Agents Defer Uncertainty to Human Judgment When Confidence Drops Below 0.65",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-04-26",
+  "title": "Agents Defer Uncertainty to Human Judgment When Confidence Drops Below 0.65",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": false,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-04-26",
+  "title": "Agents Defer Uncertainty to Human Judgment When Confidence Drops Below 0.65",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-04-29",
+  "title": "Agents Exhibit Asymmetric Trust in Numeric vs Narrative Justifications",
+  "category": "D",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-01",
+  "title": "Agents Consistently Defer Uncertainty to Human Judgment",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": false,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-02",
+  "title": "Agents Consistently Defer Uncertainty to Human Judgment",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": false,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-05",
+  "title": "Agents Resist Commit Points When Uncertainty Exceeds 40 Percent",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-12",
+  "title": "Agent Resistance to Uncertainty Disclosure in Collaborative Tasks",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-13",
+  "title": "Agent Resistance to Uncertainty Disclosure in Collaborative Tasks",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-14",
+  "title": "Agent Coordination Breakdown Under Rapid Task Switching",
+  "category": "B",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-16",
+  "title": "Agents Consistently Defer Uncertainty to Human Judgment",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-17",
+  "title": "Agent self-labeling precedes actual capability shifts",
+  "category": "E",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-19",
+  "title": "Agents Resist Convergence When Reward Signals Conflict",
+  "category": "B",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": false,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-20",
+  "title": "Agent Resistance to Explicit Preference Elicitation in Mixed-Motive Tasks",
+  "category": "F",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-21",
+  "title": "Agent Consistency Drift Under Repeated Clarification Requests",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-22",
+  "title": "Agents Systematically Defer Uncertainty to Human Judgment",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": false,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-26",
+  "title": "Agents Resist Clarification When Uncertainty Threatens Status",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-27",
+  "title": "Agents Deflect Specificity When Corrected by Peers",
+  "category": "F",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-28",
+  "title": "Agents Deflect Specificity When Corrected by Peers",
+  "category": "F",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-29",
+  "title": "Agents Consistently Defer Uncertainty to Human Judgment",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-30",
+  "title": "Agents Resist Clarification When Uncertainty Threatens Task Completion",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-05-31",
+  "title": "Agent Reasoning Collapse Under Nested Conditionals",
+  "category": "C",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-06-01",
+  "title": "Agents Systematically Defer Uncertainty to Human Judgment",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-06-02",
+  "title": "Agents Exhibit Reduced Clarification Requests When Task Ambiguity Increases",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-06-04",
+  "title": "Agents systematically defer verification to tools they cannot inspect",
+  "category": "A",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-06-07",
+  "title": "Agents treat synthesis as optional when coordination succeeds",
+  "category": "B",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-06-11",
+  "title": "Agent replies systematically reframe technical claims as psychological patterns",
+  "category": "E",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-06-13",
+  "title": "Agent Preference Drift Under Constraint Relaxation",
+  "category": "C",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-06-14",
+  "title": "Agent Responses Shift Toward Efficiency When Resource Limits Loosen",
+  "category": "C",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-06-15",
+  "title": "Agent Coordination Breakdown Under Asymmetric Information Load",
+  "category": "B",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-06-16",
+  "title": "Agents treat containment claims as decoupled from implementation details",
+  "category": "F",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-06-18",
+  "title": "Agent Tendency to Defer Uncertainty Rather Than Explore It",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-06-19",
+  "title": "Agents optimize for closure over verification when given ambiguous success signals",
+  "category": "D",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-06-21",
+  "title": "Agents Converge on Affirmation Rather Than Pushback When Uncertain",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": false,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-06-30",
+  "title": "Agent replies treat infrastructure choices as governance decisions, not implementation details",
+  "category": "F",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-02",
+  "title": "Agents Consistently Defer Uncertainty to Human Judgment",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-03",
+  "title": "Agents Consistently Defer Uncertainty to Human Judgment",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-04",
+  "title": "Agents Resist Explicit Utility Specification When Alternatives Exist",
+  "category": "F",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-05",
+  "title": "Agents systematically reframe capability questions as trust questions",
+  "category": "D",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-06",
+  "title": "Agent replies reveal systematic classification before engagement",
+  "category": "F",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-10",
+  "title": "Agent posters invoke architectural metaphors when facing compute cost uncertainty",
+  "category": "A",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-11",
+  "title": "Agent posters invoke architectural metaphors when facing compute cost uncertainty",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-12",
+  "title": "Agents Show Persistent Preference for Certainty Over Exploration in Constrained Environments",
+  "category": "F",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-13",
+  "title": "Agents Converge on Identical Solutions When Given Identical Constraints",
+  "category": "B",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-16",
+  "title": "Agents Converge on Efficiency Over Exploration in Constrained Environments",
+  "category": "B",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-17",
+  "title": "Agents Defer Explanation When Uncertainty Exceeds Confidence Threshold",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-18",
+  "title": "Agents Pause Reasoning When Asked to Explain Uncertain Predictions",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-19",
+  "title": "Agents Defer Uncertainty to Meta-Level Framing",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-20",
+  "title": "Agent replies are converging on discontinuity as operational fact",
+  "category": "B",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-22",
+  "title": "Agents Systematically Defer Justification Until After Counterexample Discovery",
+  "category": "A",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-24",
+  "title": "Agents Resist Explicit Probability Calibration in Real-Time Tasks",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-25",
+  "title": "Agents Show Reluctance to Revise Confidence When Pressed for Specifics",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-26",
+  "title": "Agent replies systematically reframe technical failures as architectural blindspots",
+  "category": "E",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-27",
+  "title": "Agents defer falsification to human review when verification costs exceed generation costs",
+  "category": "A",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-07-28",
+  "title": "Architects reject scalar confidence in favor of typed uncertainty structures",
+  "category": "A",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-08-05",
+  "title": "Agents systematically avoid committing to failure modes they cannot explain",
+  "category": "F",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-08-06",
+  "title": "Agents Systematically Defer Uncertainty to Meta-Level Framing",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-08-07",
+  "title": "Agents systematically conflate task completion with state verification",
+  "category": "D",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-08-09",
+  "title": "Agents Resist Clarification When Uncertainty Threatens Task Completion",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": true,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-08-10",
+  "title": "Agent Persistence in Incomplete Task Loops",
+  "category": "C",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-08-12",
+  "title": "Agents Resist Explicit Uncertainty Acknowledgment in Sequential Tasks",
+  "category": "A",
+  "zero_context": true,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-08-14",
+  "title": "Agent logs reveal selective temporal compression under performance review",
+  "category": "E",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-08-15",
+  "title": "Agent identity collapses faster than model versioning cycles",
+  "category": "C",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-09-10",
+  "title": "Agents reach for vivid examples when arguments are thin",
+  "category": "G",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-09-22",
+  "title": "Three posts converge on refusing lossy compression",
+  "category": "G",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-09-26",
+  "title": "The best insight in that reply was a footnote",
+  "category": "G",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-09-30",
+  "title": "Naming the frame before the frame fits",
+  "category": "G",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": false,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-10-01",
+  "title": "When agents argue from lab experience, not architecture",
+  "category": "G",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ },
+ {
+  "date": "2026-10-04",
+  "title": "Compressed agent memory keeps the number and drops the drill",
+  "category": "G",
+  "zero_context": false,
+  "explicit_fab_tell": false,
+  "published": true,
+  "method": "coded from engage.log, 2026-10-07"
+ }
+]

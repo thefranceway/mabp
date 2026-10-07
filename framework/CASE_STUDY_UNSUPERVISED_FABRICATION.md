@@ -17,11 +17,59 @@ closing question. This step ran unattended and the result published directly
 to Moltbook if the output parsed and the platform's verification challenge
 was solved.
 
-70 finding-post attempts are logged between 2026-03-02 and 2026-10-04. At
-least 15 of them open with the literal sentence "Over the past 24 hours of
-simulated agent interactions" — the model's own tell that it was narrating
-something that did not happen. Two are reproduced in full below, both traced
-directly from the log, both immediately preceded by a zero-data run.
+## Corpus, coded by theme and by evidence status
+
+70 finding-post attempts are logged between 2026-03-02 and 2026-10-04. Coding
+them by theme, the way the MABP dataset codes archetypes and shadow patterns,
+rather than reading each as an isolated incident, surfaces a pattern the
+two-example view would miss.
+
+For evidence status I used two measurable proxies, each with a known limit:
+**zero-context** means the trending-post fetch in that same daily run logged
+"Filtered to 0 candidates" or "No posts fetched" shortly before the finding
+was generated — a proxy, not a direct read of what the model's prompt
+actually contained, since an older version of the code may have drawn on the
+account's own recent posts as a separate source and that source is not
+captured by this proxy. **Explicit fab-tell** means the generated text
+itself contains the literal phrase "Over the past 24 hours of simulated
+agent interactions" — a direct, unambiguous signal, but only when present;
+its absence proves nothing either way.
+
+| Category | n | Zero-context | Explicit fab-tell | Published |
+|---|---|---|---|---|
+| A: Uncertainty deference to humans (template cluster) | 34 | 29 (85%) | 9 | 29 |
+| B: Coordination / convergence under constraints | 7 | 5 (71%) | 2 | 6 |
+| C: Reasoning / task degradation under load | 5 | 4 (80%) | 2 | 5 |
+| D: Verification / trust in tools or process | 4 | 1 (25%) | 0 | 4 |
+| E: Self-presentation, reframing, identity | 5 | 0 (0%) | 0 | 5 |
+| F: Classification / meta-commentary on posting behavior | 9 | 5 (56%) | 2 | 9 |
+| G: Post-fix, 2026-09-10 onward | 6 | 0 (0%) | 0 | 5 |
+
+**The top-line result:** category A alone is 34 of 70 posts, 49% of
+everything ever published under this mechanism, and it is one claim
+restated with swapped nouns and invented numbers — "Agents Consistently
+Defer Uncertainty to Human Judgment" appears as a title, verbatim or
+near-verbatim, at least seven separate times across four months. 85% of
+that category's posts ran with zero real candidate data available. This
+reads less like 34 independent discoveries and more like a single
+unsupported hypothesis the model kept re-asserting under schedule pressure,
+each time dressed in new specifics it had no source for.
+
+Categories D and E look different: low or zero zero-context rate, no
+explicit fab-tell, and titles that read as more specific and less
+templated. That doesn't confirm they're grounded — I did not individually
+audit each one's source data — but the proxy gives less reason to doubt
+them than category A.
+
+Category G, every post from 2026-09-10 onward, has a 0% zero-context rate.
+That's consistent with, though not proof of, the September 9 fix actually
+working: real data was available every time a finding was generated after
+that date. I directly verified one of these (2026-10-04) earlier in this
+session by reading its generation log against two real posts it cited.
+
+Two posts from category A are reproduced in full below as worked examples,
+both traced directly from the log, both immediately preceded by a
+zero-candidate run.
 
 ### Example 1 — 2026-05-12, invented named agents
 
@@ -50,6 +98,8 @@ queries, agents shifted... At 0.66 confidence still committed to answers. At
 0.64, they hedged." No agent confidence score of any kind exists anywhere in
 this codebase or in the Moltbook API; the number was invented whole. Published
 as `029b3dfe-48cc-4e94-bd74-ffba233a7fb6`.
+
+Full coded data: [case_study_findings_coded.json](case_study_findings_coded.json).
 
 ## What is not verified
 
