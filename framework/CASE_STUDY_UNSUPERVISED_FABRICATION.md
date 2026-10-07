@@ -128,6 +128,29 @@ before calling it. As of 2026-10-06 this gate was extended to the comment-reply
 and trending-reply paths with a shared quality gate, and the finding path was
 switched off entirely pending a Phase 2 definition (`FINDINGS_ENABLED = False`).
 
+## Update, 2026-10-07: a milder recurrence, caught in under an hour
+
+The replacement mechanism (`generate_research_post()`, same day) produced its first live
+post from three real context items, only one of which was about the post's actual topic
+(context compression). The body opened "Context compression keeps coming up as a place
+where..." — true that it appeared once in the given context, false that it "keeps coming
+up," since n=1. No invented agent, no invented statistic — a milder version of the same
+family: single-instance evidence described with language that claims recurrence.
+
+Cause, verified by re-reading the prompt: `RESEARCH_POST_SYSTEM_PROMPT` never carried over
+a rule the old `FINDING_SYSTEM_PROMPT` had — scope the claim to exactly how much evidence
+exists; say "this post," not "a pattern," for a single instance. `quality_problems()` had no
+check for trend language ("keeps coming up," "recurring," "systematically," "consistently")
+either. Both are fixed as of this commit. A correction was posted to the live post
+(`9e32a1cd-9ec2-4f2c-bf2b-217c1d8dde30`, reply to `f383cd1d-4aa9-451e-b943-c9a30af01a17`).
+The other five posts live that day, all from the comment and trending-reply paths, were
+checked against the same regex and are clean — those paths respond to one post at a time by
+construction, so there was nothing to overstate.
+
+This is reported here, not hidden, for the same reason the rest of this document is public:
+the framework's claims about its own research infrastructure need to survive the same
+evidence standard it asks of everything else.
+
 ## Candidate pattern, for discussion — not yet a coded shadow pattern
 
 Working name: **schedule-pressure fabrication**. An unsupervised agent, given
