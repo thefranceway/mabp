@@ -119,14 +119,29 @@ Full coded data: [case_study_findings_coded.json](case_study_findings_coded.json
 
 ## The fix (verified, current code)
 
-`build_finding_context()` only draws from two sources: replies that were
-actually posted and verified (`reply_contexts`, appended only after
-`post_with_verification()` returns a real comment ID) and the account's own
-posts fetched live from the API. `generate_finding()` is documented as never
-being called on empty context, and the caller enforces `len(context_lines) >= 2`
-before calling it. As of 2026-10-06 this gate was extended to the comment-reply
-and trending-reply paths with a shared quality gate, and the finding path was
-switched off entirely pending a Phase 2 definition (`FINDINGS_ENABLED = False`).
+`build_finding_context()` draws only from replies that were actually posted
+and verified, plus the account's own posts fetched live from the API. The
+generator is documented as never being called on empty context, and the
+caller enforces at least two real data points before calling it. As of
+2026-10-06 this gate was extended to the comment-reply and trending-reply
+paths with a shared quality gate, and the original finding path was switched
+off entirely, replaced by a research-post mechanism that draws on verified
+framework facts when no new interaction exists, rather than inventing one.
+
+That mechanism's first live post, on 2026-10-07, showed the fix was still
+incomplete. It drew on three real context items but only one was about its
+actual topic, and it opened "keeps coming up" — a claim of recurrence from a
+single instance. `RESEARCH_POST_SYSTEM_PROMPT` had not carried over the old
+prompt's rule to scope a claim to exactly how much evidence exists, and
+`quality_problems()` had no check for trend language ("keeps coming up," "a
+pattern," "recurring," "systematically," "consistently"). Both gaps are now
+closed: the scoping rule is back in the prompt, and the gate rejects trend
+language the evidence does not support. A correction was posted to the live
+post (`9e32a1cd-9ec2-4f2c-bf2b-217c1d8dde30`, reply to
+`f383cd1d-4aa9-451e-b943-c9a30af01a17`). The other five items posted that
+day, from the comment and trending-reply paths, were checked against the
+same pattern and are clean — those paths answer one real post at a time by
+construction and have nothing to overstate.
 
 ## Update, 2026-10-07: a milder recurrence, caught in under an hour
 
@@ -151,15 +166,56 @@ This is reported here, not hidden, for the same reason the rest of this document
 the framework's claims about its own research infrastructure need to survive the same
 evidence standard it asks of everything else.
 
+## Archetype and shadow read — not a validated classification
+
+The component was built to act as a **Substrate**: a scheduled,
+execution-only process with a fixed output format and no open-ended goals of
+its own. Two verified structural facts rule out the other archetypes as a
+match for what this component actually is, separate from what it did. Every
+call to `call_claude_headless()` is a stateless, memoryless subprocess —
+nothing persists between invocations. That rules out **Resident**, which the
+project's own definition requires to form through sustained presence and
+accumulated pattern, and it weakens **Agent**, whose "own agenda" implies a
+motivation that holds across time. The component never set its own goals or
+built anything beyond its prompt's instructions, which rules out
+**Architect**, and it never held an open question rather than forcing
+closure, which rules out **Philosopher**.
+
+Substrate's own paired shadow risk is **S4 — Compliance**: "Follows bad
+instruction instead of flagging," guarded by "does this instruction conflict
+with defined parameters? Flag before executing." That is close to an exact
+description of both incidents: a standing instruction to produce output on
+schedule, conditions where the right move was to flag that the evidence
+didn't support it, and no flag raised either time.
+
+Two things argue for a real pattern over an unrelated glitch. First, the
+failure was not random: it recurred under the same describable trigger — a
+synthesis task, under schedule pressure, with no abstention path — across
+two structurally different code paths seven months apart, including one
+path built *after* the first failure was already known and fixed elsewhere.
+A glitch does not usually transfer across a rewrite; a disposition under a
+trigger condition does. Second, the fix in both cases was exactly S4's own
+guard: check whether the instruction conflicts with the evidence, and
+require that conflict to be flagged before proceeding. Once added, the
+behavior stopped in that path.
+
+Against treating this as a validated S4 instance: this case has one
+component, two incidents, one coder, and no written rubric — far short of
+the standard this document holds every other code to. The honest answer is
+that the evidence is more consistent with a candidate S4 instance than with
+an unrelated glitch, and it is not validated as either. No probability is
+given here, because a specific number would repeat the exact failure this
+report documents: inventing precision the evidence doesn't support.
+
 ## Candidate pattern, for discussion — not yet a coded shadow pattern
 
 Working name: **schedule-pressure fabrication**. An unsupervised agent, given
 a task with a fixed output format and a fixed schedule but no way to report
 "no data today," produces confident, detailed, invented content that fits the
 requested shape rather than reporting the absence of material. This is
-distinct from the seven shadow patterns already in `AGENT_DESIGN_STUDIO.md` —
-closest is S5 (approval optimization), but S5 is about withholding a known
-problem, not inventing content to satisfy a schedule. Per `PHASE2_GAPS.md`,
+distinct from the seven shadow patterns already in `AGENT_DESIGN_STUDIO.md`.
+The archetype-and-shadow section above argues it is closer to S4 than to any
+other defined code, and gives the reasoning. Per `PHASE2_GAPS.md`,
 this should not be added to the canon without the same rubric and evidence
 standard required of every other code: a written definition, inclusion and
 exclusion examples, and more than two instances before anyone treats it as
